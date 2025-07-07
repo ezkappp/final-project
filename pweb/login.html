@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Magang D3TI</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bs/icons/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/style-login.css" />
+</head>
+<body>
+
+  <div class="login-header">LOGIN</div>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="title-group d-flex justify-content-center align-items-center mb-3">
+        <img src="img/logoamikom.png" class="logo-img me-2" alt="Logo" />
+        <div class="text-start">
+          <h6 class="title-utama mb-0">MAGANG D3 TEKNIK INFORMATIKA</h6>
+          <p class="title-sub mb-0">UNIVERSITAS <span class="purple">AMIKOM</span> YOGYAKARTA</p>
+        </div>
+      </div>
+
+      <p class="desc-text">Silahkan Login dengan NIM dan Password AMIKOM Anda</p>
+
+      <form onsubmit="return redirectToNext()">
+        <div class="form-group">
+          <input type="text" class="form-control form-field" placeholder="NPM/NIM AMIKOM" required />
+        </div>
+        <div class="form-group position-relative">
+          <input type="password" class="form-control form-field" placeholder="Password" required />
+          <button type="submit" class="btn-submit rounded-circle">
+            <i class="bi bi-arrow-right text-white"></i>
+          </button>
+        </div>
+
+        <div class="form-check d-flex align-items-center mb-4">
+          <input type="checkbox" class="form-check-input me-2" required />
+          <label class="form-check-label small">Saya bukan robot</label>
+        </div>
+
+        <div class="link-row">
+          <a href="#" class="text-purple small-link">Lupa password?</a>
+          <a href="#" class="text-purple small-link">Belum registrasi?</a>
+        </div>
+
+        <button type="button" class="btn btn-google w-100">
+          <i class="bi bi-google me-2"></i> AMIKOM GOOGLE ACCOUNT
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="bs/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function redirectToNext() {
+      // Nanti ganti ke validasi login beneran
+      window.location.href = "registrasi.html";
+      return false;
+    }
+  </script>
+</body>
+</html>

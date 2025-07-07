@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bimbingan</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bs/icons/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <button class="navbar-toggler d-block border-0" type="button" id="sidebarToggle" aria-label="Toggle sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h1 class="navbar-brand mx-auto mb-0">MAGANG MAHASISWA D3TI</h1>
+    <button class="btn btn-logout">LOGOUT</button>
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Layout -->
+<div class="main-layout">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3 class="sidebar-title">Menu Navigasi</h3>
+    </div>
+    <button class="nav-item" onclick="location.href='registrasi.html'"><i class="bi bi-pencil-square me-2"></i> Pendaftaran</button>
+    <button class="nav-item" onclick="location.href='approval.html'"><i class="bi bi-check2-square me-2"></i> Approval</button>
+    <button class="nav-item active"><i class="bi bi-journal-bookmark me-2"></i> Bimbingan</button>
+    <button class="nav-item" onclick="location.href='laporan.html'"><i class="bi bi-file-earmark-text me-2"></i> Laporan Magang</button>
+    <button class="nav-item" onclick="location.href='penilaian.html'"><i class="bi bi-star-fill me-2"></i> Penilaian</button>
+    <button class="nav-item" onclick="location.href='pengajuan-sertif.html'"><i class="bi bi-award me-2"></i> Pengajuan Sertifikat</button>
+    <button class="nav-item" onclick="location.href='cetak-sertif.html'"><i class="bi bi-award me-2"></i> Sertifikat</button>
+    <button class="nav-item" onclick="location.href='viewdata.html'"><i class="bi bi-award me-2"></i> View Data oleh Prodi</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="content-card">
+      <div class="page-header">
+        <h2>Bimbingan</h2>
+        <span class="username">(username@amikom)</span>
+      </div>
+
+      <div class="table-container custom-card shadow-lg p-3">
+        <table class="table custom-table table-bordered align-middle text-center">
+          <thead>
+            <tr>
+              <th>NIM</th>
+              <th>Jadwal</th>
+              <th>Dosen Pembimbing</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>24.01.0004</td>
+              <td><span class="badge-jadwal">24/11/2022</span></td>
+              <td>Dr. Aminah, M.Kom</td>
+              <td>
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-camera-video me-1"></i> Zoom
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>24.01.0004</td>
+              <td><span class="badge-jadwal gray">24/09/2022</span></td>
+              <td>Prof. Rahman, PhD</td>
+              <td>
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-camera-video me-1"></i> Zoom
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 d-flex align-items-center">
+        <img src="img/logoamikom.png" alt="Logo Amikom" class="logo-amikom" />
+        <div class="ms-2">
+          <div class="university-name">UNIVERSITAS AMIKOM</div>
+          <div class="university-location">YOGYAKARTA</div>
+        </div>
+      </div>
+      <div class="col-md-6 text-end">
+        <div class="contact-info">
+          <div><i class="bi bi-geo-alt-fill me-2"></i>Jl. Ring Road Utara, Condong Catur, Sleman</div>
+          <div><i class="bi bi-telephone-fill me-2"></i>(0274) 884201 - 207</div>
+          <div><i class="bi bi-telephone-fill me-2"></i>(0274) 884208 Kodepos: 55283</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-stripe"></div>
+
+<script src="bs/js/bootstrap.bundle.min.js"></script>
+<script>
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
+    });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
+    }
+  });
+</script>
+</body>
+</html>

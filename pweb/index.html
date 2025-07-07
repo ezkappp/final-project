@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Magang D3TI</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bs/icons/bootstrap-icons.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f3e8ff, #ede9fe);
+      margin: 0;
+      padding: 0;
+      color: #1e1e1e;
+    }
+
+    .topbar {
+      background-color: #3803A2;
+      color: white;
+      font-size: 0.85rem;
+      padding: 0.3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar i {
+      margin-right: 0.3rem;
+    }
+
+    .navbar-main {
+      background-color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-main .nav-link {
+      color: #1e1e1e;
+      font-weight: 500;
+      margin-left: 1.5rem;
+    }
+
+    .navbar-main .nav-link:hover {
+      color: #5b21b6;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #1e1e1e;
+    }
+
+    .badge-magenta {
+      background-color: #c084fc;
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h6 {
+      color: #7c3aed;
+      font-weight: bold;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1e1e1e;
+      margin: 1rem 0;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div><i class="bi bi-telephone-fill"></i> (0234) 98765</div>
+    <div><i class="bi bi-envelope-fill"></i> magangd3ti@amikom.ac.id</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-main">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <div class="logo-text me-3">D3 Teknik Informatika Amikom</div>
+        <span class="badge-magenta">MAGANG</span>
+      </div>
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h6>Halo sobat Ungu!</h6>
+      <p>Selamat datang di website amikom. Semoga pekerjaanmu sesuai yang diimpikan dan bersiaplah untuk menggenggam dunia</p>
+      <h1>Dari ruang kelas ke ruang kerja — magangmu, masa depanmu, dimulai di sini!</h1>
+    </div>
+    <div class="hero-img ms-4">
+      <img src="img/depan.png" alt="Ilustrasi Magang" />
+    </div>
+  </section>
+
+  <script src="bs/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

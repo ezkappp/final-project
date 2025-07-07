@@ -1,0 +1,354 @@
+/* === GLOBAL === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ede9fe, #d8b4fe);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-custom {
+  background-color: #3803A2;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.btn-logout {
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+/* === SIDEBAR === */
+.main-layout {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 180px);
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  padding: 2rem 1.5rem;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  width: 100%;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-item i {
+  font-size: 1rem;
+  vertical-align: text-bottom;
+  color: #4b5563;
+}
+
+.nav-item:hover {
+  background-color: #f0f0f0;
+  border-left-color: #9e9e9e;
+}
+
+.nav-item.active {
+  background-color: #ede9fe;
+  border-left-color: #6b21a8;
+  font-weight: bolder;
+}
+
+.nav-item.active i {
+  color: #6b21a8;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.9rem;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.content-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 960px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.custom-card {
+  background: linear-gradient(to bottom right, #ede9fe, #d8b4fe);
+  border-radius: 25px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* === PAGE HEADER === */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #770000;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.page-header h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 4px;
+  background-color: #770000;
+  border-radius: 2px;
+}
+
+.username {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #4b5563;
+  background: #f3f4f6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+
+/* === TABLE === */
+.table.custom-table thead th {
+  background-color: #5b21b6 !important;
+  color: white !important;
+  font-weight: 600 bolder;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+  border: 1px solid #d1d5db;
+}
+.table.custom-table tbody td {
+  border: 1px solid #e5e7eb;
+  padding: 0.7rem;
+}
+.table.custom-table tbody tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+.table.custom-table tbody tr:hover {
+  background-color: #f5f3ff;
+}
+
+.table-container {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === FORM PENDAFTARAN === */
+.regist-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
+
+.form-daftar {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-daftar h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 2rem;
+}
+
+.form-daftar label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: #4b5563;
+}
+
+.form-daftar input,
+.form-daftar select {
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form-daftar button {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form-daftar button:hover {
+  background-color: #5b21b6;
+}
+
+/* === INPUT PLACEHOLDER STYLE GLOBAL === */
+.form-control::placeholder {
+  color: #9ca3af !important;
+  opacity: 0.8;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #d1d5db;
+}
+
+/* setif */
+.status-disahkan {
+  color: green;
+  font-weight: 600;
+}
+.status-belum {
+  color: red;
+  font-weight: 600;
+}
+    
+/* === TOMBOL PENGAJUAN SERTIFIKAT === */
+.btn-primary-custom {
+  background-color: #1e1ebf;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  background-color: #1616a5;
+}
+
+.btn-outline-primary-custom {
+  border: 1px solid #1e1ebf;
+  color: #1e1ebf;
+  font-weight: 600;
+  padding: 0.6rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.btn-outline-primary-custom:hover {
+  background-color: #1e1ebf;
+  color: white;
+}
+
+
+/* === FOOTER === */
+.footer {
+  background: #3803A2;
+  color: white;
+  padding: 1rem;
+}
+
+.footer-stripe {
+  height: 6px;
+  background: linear-gradient(90deg, #20005f 25%, #410075 50%, #9333ea 75%);
+}
+
+.logo-amikom {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+  background-color: white;
+  padding: 2px;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.university-name {
+  font-weight: bolder;
+  color: white;
+}
+
+.university-location {
+  color: #cbd5e1;
+}
+
+.contact-info {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.contact-info i {
+  color: #a5b4fc;
+  margin-right: 0.5rem;
+}
+
+/* === OVERLAY === */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
